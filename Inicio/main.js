@@ -165,3 +165,110 @@ switch (unoacinco){
 
 const pi = Math.PI;
 console.log(pi.toFixed(3));
+
+
+/*1. Crea una función en la que pasándole un string como parámetro se substituyan las letras A por las O. 
+2. Crea una función que compruebe si un string pasado como parámetro empieza por `aca' 
+y llama dos veces a la función una con academia y otra con escuela. 
+3. Crea una función que pasándole un Hola nos salude 3 veces utilizando métodos de Strings. 
+*/
+
+function substituyan (palabra = "ariabrjafeioaakpfjjdsasdvhih"){
+return palabra.replaceAll("a","o");
+
+}
+
+console.log(substituyan());
+
+// Ejercicio 2
+
+function compruebe (palabra=""){
+   console.log(palabra.startsWith("aca"));
+
+}
+compruebe("academia");
+compruebe("escuela");
+
+//Ejercicio 3
+function saludar (saludo){
+    console.log(saludo.repeat (3));
+}
+
+saludar("holita ");
+
+/* Realiza un bucle tanto con FOR como con WHILE que impriman 10 
+veces I <3 code 
+*/
+
+for (let contador=0; contador < 10;contador++){
+    console.log("I <3 code");
+}
+
+let contador = 0;
+
+while (contador <10){
+    console.log("I love code")
+    contador ++;
+}
+
+
+/*1. Define un array con las letras 'a', 'b', 'c', 'd' y 'e'. Y, posteriormente, recorre cada uno de los elementos mediante a forEach 
+2. Define una variable let numero = 5; que itere hasta que el valor sea O. */
+
+//Ejercicio 1
+
+const abcde = ["a","b","c","d","e"];
+
+abcde.forEach(element => {
+    console.log(element);
+    
+});
+//Ejercicio 2
+let numero = 5;
+
+while (numero > 0){
+    numero = numero;
+    console.log(numero);
+    numero = numero -1;
+}
+
+/*1. Analiza que hace el siguiente programa, explica lo que hace ¿Cuántas iteraciones da? ¿Cuándo entrará en el if? ¿Y en el. else?: 
+let numero = 1; 
+let i = 0; 
+do{ 
+if(i === 0)
+{ i++; numero--; console.log(numero); } 
+else{ numero++; console.log(numero); 
+} while (numero < 5); 
+*/
+
+//!6 iteraciones, entra al if una vez y al else 5
+
+/* EJERCICIO
+1. A partir de la pizza sustituías todos los elemento del array por
+cervezas:🍔🌯🍣🍕🍜🍱🍙🍘🥩
+2. Encontrar si existe un elemento en el array que sea una piña. 🍕🍕🍍🍕🍕
+3. Quita la piña del siguiente array. 🍕🍕🍍🍕🍕
+4. A partir del siguiente array 🍓🍋🍓🍋🍓convierte todas las fresas en 🍄
+5. Añade el siguiente icono 🥵 inmediatamente después del cada
+🌶️ en el siguiente array: 🌶️🥛🌶️🥛🌶️🥛
+6. Añade una 🃏 cartas comodín entre medio de dos cartas . Por
+ejemplo:🎴🃏🎴 En el siguiente array: 🎴🎴🎴🃏🎴🎴🎴 */
+
+// !Ejercicio 1
+
+let comida = ["🍔","🌯","🍣","🍕","🍜","🍱","🍙","🍘","🥩"];
+
+console.log(comida);
+
+const indice = comida.findIndex(emoji => emoji == "🍕",);
+console.log(indice);
+
+comida = comida.fill("🍺",indice, comida.length);
+console.log(comida);
+
+// !Ejercicio 2
+
+let hawaiana = ["🍕","🍕","🍍","🍕","🍕"];
+
+hawaiana.some(checkpina(emoji => emoji =="🍍"));

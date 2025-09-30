@@ -271,4 +271,65 @@ console.log(comida);
 
 let hawaiana = ["🍕","🍕","🍍","🍕","🍕"];
 
-hawaiana.some(checkpina(emoji => emoji =="🍍"));
+const boleana = hawaiana.some(emoji => emoji =="🍍");
+
+console.log(boleana);
+
+// !Ejercicio 2
+
+let hawaiana2 = ["🍕","🍕","🍍","🍕","🍕"];
+
+const indicepina = hawaiana2.findIndex(emoji2 => emoji2 =="🍍");
+
+console.log(indicepina);
+
+console.log(hawaiana2);
+
+
+// !Ejercicio 3
+let hawaiana3 = ["🍕","🍕","🍍","🍕","🍕"];
+for (var i = 0; i<hawaiana3.length;i++){
+    hawaiana3[i] = hawaiana3[i].replace("🍍", "")
+}
+console.log(hawaiana3);
+
+
+// !Ejercicio 4
+// 4. A partir del siguiente array 🍓🍋🍓🍋🍓convierte todas las fresas en 🍄
+
+let tornerofresador = ["🍓","🍋","🍓","🍋","🍓"];
+
+for (var i = 0; i<tornerofresador.length;i++){
+    tornerofresador[i] = tornerofresador[i].replace("🍓", "🍄")
+}
+
+console.log(tornerofresador);
+
+// !Ejercicio 5
+//5. Añade el siguiente icono 🥵 inmediatamente después de cada 🌶️ en el siguiente array: 🌶️🥛🌶️🥛🌶️🥛
+
+let mexicolindo = ["🌶️","🥛","🌶️","🥛","🌶️","🥛"];
+
+
+for (let i = 0; i < mexicolindo.length; i++) {
+  if (mexicolindo[i] === "🌶️") {
+    mexicolindo.splice(i + 1, 0, "🥵");
+    i++; 
+  }
+}
+console.log(mexicolindo);
+
+// !Ejercicio 6
+
+//6. Añade una 🃏 cartas comodín entre medio de dos cartas . Porejemplo:🎴🃏🎴 En el siguiente array: 🎴🎴🎴🃏🎴🎴🎴 */
+
+let cartitas = ["🎴","🎴","🎴","🃏","🎴","🎴","🎴",];
+
+for (let i = 0; i < cartitas.length; i++) {
+  if (cartitas[i] === "🎴" && cartitas[i+1] ==="🎴")  {
+    cartitas.splice(i + 1, 0, "🃏");
+    i++; 
+  }
+}
+
+console.log(cartitas);

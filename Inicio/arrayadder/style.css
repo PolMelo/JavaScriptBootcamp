@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    border-radius:2px;
+    border: 1px black solid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+button {
+    width:fit-content;
+}
+
+div {
+    width: 500px;
+    
+}

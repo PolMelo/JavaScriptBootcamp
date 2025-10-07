@@ -1,0 +1,12 @@
+.grid
+{
+    display:flex;
+    
+}
+
+#cul {
+    z-index: 4;
+}
+
+#cara
+{z-index: 3;}

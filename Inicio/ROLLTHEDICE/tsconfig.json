@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./",
+
+    // Environment Settings - CAMBIA ESTO:
+    "module": "ESNext",  // o "ES2020", "ESNext" para navegador
+    "target": "ES6",
+    "moduleResolution": "node",
+    "lib": ["DOM", "ES6"],  // Añade esto para APIs del navegador
+
+    // Quita o comenta estas líneas que no necesitas:
+    // "types": [],
+    // "declaration": true,
+    // "declarationMap": true,
+
+    // Other Outputs
+    "sourceMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Recommended Options
+    "strict": true,
+    "verbatimModuleSyntax": false,  // Cambia a false
+    "isolatedModules": false,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -26,7 +26,7 @@
     "strict": true,
     "verbatimModuleSyntax": false,  // Cambia a false
     "isolatedModules": false,
-    "moduleDetection": "force",
+    "moduleDetection": "auto",
     "skipLibCheck": true
   },
   "include": [

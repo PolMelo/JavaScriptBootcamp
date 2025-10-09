@@ -13,6 +13,10 @@ body {
     padding: 0px;
     margin: 0px;
     min-height: 100vh;
+    max-height: 100vh;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -37,18 +41,22 @@ button {
     color: chartreuse;
     background-color: red;
     padding: 0px;
+    
     text-align: center;
+    border-radius: 3px;
+    color-scheme: red chartreuse;
+    border: #006400 3px solid;
 }
 
 /* Contenedor principal para Menu Principal */
 .MenuDiv {
     display: grid;
     place-items: center;
-    height: 100vh;
+    height: fit-content;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 90%;
-    margin: 0 auto;
+    gap: 100px;
+    max-width: fit-content;
+    margin: 0px;
     padding: 20px;
 }
 
@@ -56,11 +64,18 @@ button {
 .divunsol {
     display: grid;
     place-items: center;
-    height: 100vh;
+    min-height: 60vh;
     grid-template-columns: 1fr;
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
+    justify-content: top;
+}
+
+/**/
+.gridtres{
+    flex:grid;
+    grid-template-columns: 100px 1fr 100px;
 }
 
 /*Pel div de double que contindrà dos fotos*/
@@ -85,7 +100,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 60vh;
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
@@ -101,6 +116,20 @@ button {
     height: auto;
     display: block;
 }
+
+.dadoDobleTirat {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    
+}
+
 
 .BotoDadoDoble:hover .dadoModo.doble {
     animation: spinScale 1.5s ease-in-out infinite;
@@ -214,6 +243,72 @@ button {
     background-color: white;
 }
 
+
+
+/*!Aqui tot el formulari per aposar*/
+#apuestaForm {
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #b80000; /* rojo fuerte */
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+   max-width: fit-content;   }
+
+#apuestaForm label {
+    color: #006400; /* verde oscuro */
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+#apuestaForm input[type="number"] {
+    border: 1.5px solid #006400;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1em;
+    width: 80px;
+    margin-left: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+#apuestaForm input[type="number"]:focus {
+    border-color: #b80000;
+}
+
+#apuestaForm select {
+    border: 1.5px solid #b80000;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1em;
+    background: #fff;
+    color: #006400;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#apuestaForm select:focus {
+    border-color: #006400;
+}
+
+#apuestaForm button[type="submit"] {
+    background: linear-gradient(90deg, #006400 60%, #b80000 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+#apuestaForm button[type="submit"]:hover {
+    background: linear-gradient(90deg, #b80000 60%, #006400 100%);
+    transform: scale(1.05);
+}
+
+
+
 /* !Media Queries para Responsividad */
 
 /* Tablets */
@@ -276,6 +371,7 @@ button {
     .atras {
         font-size: 32px;
         bottom: 30px;
+        background-color: greenyellow;
     }
 
 

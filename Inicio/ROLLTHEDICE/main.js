@@ -1,3 +1,4 @@
+"use strict";
 document.addEventListener('DOMContentLoaded', () => {
     const dadosingle = document.getElementById("dadosingle");
     const dadodouble = document.getElementById("dadodouble");
@@ -12,3 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+//# sourceMappingURL=main.js.map

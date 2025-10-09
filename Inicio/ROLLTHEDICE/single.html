@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+ <div class="gridtres"> 
+  <form id="apuestaForm" style="margin-bottom:20px;">
+  <label>
+    Número (1-6):
+    <input type="number" id="apuestaNumero" min="1" max="6" required>
+  </label>
+  <select id="apuestaTipo" required>
+    <option value="mayor">Mayor que</option>
+    <option value="menor">Menor que</option>
+    <option value="igual">Igual que</option>
+  </select>
+  <button type="submit">Apostar</button>
+</form>
 
      <div class="divunsol">
         <button class="botodado" id="tirarun">
                 <img id="dadosoltirar" class="dadoModo single" src="IMG/single.png" alt="">
                         </button>
+                        </div>
        <!-- Ejemplo para double.html y single.html -->
 <button class="atras" onclick="history.back()" style="margin-top:30px;">
   <span class="atras">⬅ VOLVER</span>
 </button>
-    </div>
+    
 
+</div>  
 
-       <script src="main.js"></script>
+       <script src="single.js"></script>
 </body>
 </html>
